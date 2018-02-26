@@ -13,7 +13,7 @@ FIFTY_MILES_IN_METERS = 80467.2
 
 def run!
   SPORTS.each do |sport|
-    # I had to modify the request since nusports returns
+    # I had to modify the user agent since nusports returns
     # 404 for some strange reason (presumably to prevent
     # scraping, though a 5xx error seems more appropriate).
     response = RestClient.get("http://nusports.com/schedule.aspx?path=#{sport}", {user_agent: "go cats"})
